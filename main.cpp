@@ -9,11 +9,13 @@
 using namespace std;
 
 int main() {
-    int num1 = 0;
-    int num2 = 1.5;//int에는 소수점 뗌 - 비쥬얼 스튜디오에서는 데이터 손실 주의 알람 뜨는데 Xcode는 없군..
-    int num3 = num2*2;//3이 아니라 2 : num2가 1이기 때문
+    int num1 = 11;
+    int num2 = 011;//8진수
+    int num3 = 0b11;//2진수
+    int num4 = 0x11;//16진수
     cout<<num1<<endl;
-    cout<<num2<< endl;
-    cout<<num3<<endl;
+    cout<<num2<< endl;//8+1
+    cout<<num3<<endl;//2+1
+    cout<<num4<<endl;//16+1
     return 0; //종료코드 0이면 정상
 }
