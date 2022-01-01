@@ -11,19 +11,19 @@
 using namespace std;
 
 int main() {
-    //overflow
+    //overflow min
     
     //unsigned
-    uint32_t uintoverflow = numeric_limits<uint32_t>::max();
-    uint32_t uintoverflow_ = uintoverflow + 1;//overflow : 0
+    uint32_t uintoverflow = numeric_limits<uint32_t>::min();
+    uint32_t uintoverflow_ = uintoverflow - 1;//overflow : 최댓값 나옴
     cout<<uintoverflow<<endl;
     cout<<uintoverflow_<<endl;
     
     cout<<endl;
     
     //signed
-    int32_t intoverflow = numeric_limits<int32_t>::max();
-    int32_t intoverflow_ = intoverflow + 1;//실제로 overflow는 아니지만 : 음수 최솟값
+    int32_t intoverflow = numeric_limits<int32_t>::min();
+    int32_t intoverflow_ = intoverflow - 1;//최댓값 나옴
     cout<<intoverflow<<endl;
     cout<<intoverflow_<<endl;
     
