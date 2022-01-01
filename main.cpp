@@ -11,26 +11,21 @@
 using namespace std;
 
 int main() {
-    //unsigned int
-    cout << numeric_limits<uint8_t>::max()<<endl;//uint8_t의 최댓값 - unint8_t가 문자형이라서 \377로 값 나옴
-    cout << (int)numeric_limits<uint8_t>::max()<<endl;//255
-    cout << numeric_limits<uint16_t>::max()<<endl;//65535
-    cout << numeric_limits<uint32_t>::max()<<endl;//4294967295
-    cout << numeric_limits<uint64_t>::max()<<endl;//18446744073709551615
+    //overflow
+    
+    //unsigned
+    uint32_t uintoverflow = numeric_limits<uint32_t>::max();
+    uint32_t uintoverflow_ = uintoverflow + 1;//overflow : 0
+    cout<<uintoverflow<<endl;
+    cout<<uintoverflow_<<endl;
     
     cout<<endl;
     
-    //signed int
-    cout<<(int)numeric_limits<int8_t>::max()<<endl;
-    cout<<numeric_limits<int16_t>::max()<<endl;
-    cout<<numeric_limits<int32_t>::max()<<endl;
-    cout<<numeric_limits<int64_t>::max()<<endl;
+    //signed
+    int32_t intoverflow = numeric_limits<int32_t>::max();
+    int32_t intoverflow_ = intoverflow + 1;//실제로 overflow는 아니지만 : 음수 최솟값
+    cout<<intoverflow<<endl;
+    cout<<intoverflow_<<endl;
     
-    cout<<endl;
-    
-    cout<<(int)numeric_limits<int8_t>::min()<<endl;
-    cout<<numeric_limits<int16_t>::min()<<endl;
-    cout<<numeric_limits<int32_t>::min()<<endl;
-    cout<<numeric_limits<int64_t>::min()<<endl;
     return 0; //종료코드 0이면 정상
 }
