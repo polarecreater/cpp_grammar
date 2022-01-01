@@ -4,24 +4,16 @@
 //
 //  Created by 권혜민 on 2022/01/01.
 //
-using namespace std;
-#include <iostream>
 
-int main(int argc, const char * argv[]) {
-    /*
-    int x,y,z; //선언 여러 개 가능
-    x = 1;
-    y = 2;
-    z = 3;
-    std::cout << "Hello, World!\n";
-    std::cout << x<<std::endl;//endl = 개행
-    */
-    //초기화 버전
-    int x(1), y(2), z=4;
-    
-    cout<<x<<endl;
-    cout<<y<<endl;
-    cout<<z<<endl;
-    
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1 = 0;
+    int num2 = 1.5;//int에는 소수점 뗌 - 비쥬얼 스튜디오에서는 데이터 손실 주의 알람 뜨는데 Xcode는 없군..
+    int num3 = num2*2;//3이 아니라 2 : num2가 1이기 때문
+    cout<<num1<<endl;
+    cout<<num2<< endl;
+    cout<<num3<<endl;
     return 0; //종료코드 0이면 정상
 }
