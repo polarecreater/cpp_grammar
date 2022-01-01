@@ -9,24 +9,10 @@
 using namespace std;
 
 int main() {
-    int intnum = 0;
-    long longnum = 0;
-    int* intPointer = &intnum;//포인터
-    
-    //64비트 맥 환경에서
-    cout<<sizeof(intnum)<<endl;//4
-    cout<<sizeof(longnum)<< endl;//8
-    cout<<sizeof(intPointer)<<endl;//8
-    
-    cout<<endl;
-    
-    //사이즈에 민감하다면 고정형 타입
-    int8_t a = 0;
-    int16_t b = 0;
-    int32_t c = 0;
-    
-    cout<< sizeof(a) <<endl;//1 //8비트라서 8로 나누면 1
-    cout<< sizeof(b) <<endl;//2
-    cout<< sizeof(c) <<endl;//4
+    unsigned int a = 11;//11이 unsigned가 아니기 때문에 내부적으로 타입 변환되어 성능에 문제 있음
+    unsigned int b = 11u;//unsigned를 뒤에 명시
+    long int c = 22L;//l로 명시 - 1과 헷갈려서 대문자로 넣어줌
+    long long int d = 22LL;
+    unsigned long long int e = 33ULL;//또는 LLU
     return 0; //종료코드 0이면 정상
 }
