@@ -6,13 +6,15 @@
 //
 
 #include <iostream>
+#include <numeric>
+
 using namespace std;
 
 int main() {
-    unsigned int a = 11;//11이 unsigned가 아니기 때문에 내부적으로 타입 변환되어 성능에 문제 있음
-    unsigned int b = 11u;//unsigned를 뒤에 명시
-    long int c = 22L;//l로 명시 - 1과 헷갈려서 대문자로 넣어줌
-    long long int d = 22LL;
-    unsigned long long int e = 33ULL;//또는 LLU
+    cout << numeric_limits<uint8_t>::max()<<endl;//uint8_t의 최댓값 - unint8_t가 문자형이라서 \377로 값 나옴
+    cout << (int)numeric_limits<uint8_t>::max()<<endl;//255
+    cout << numeric_limits<uint16_t>::max()<<endl;//65535
+    cout << numeric_limits<uint32_t>::max()<<endl;//4294967295
+    cout << numeric_limits<uint64_t>::max()<<endl;//18446744073709551615
     return 0; //종료코드 0이면 정상
 }
