@@ -11,21 +11,18 @@
 using namespace std;
 
 int main() {
-    //overflow min
+    //부동소수점
+    float a = 1.5;
+    float b = a*1.5;
+    float c = a/2;
+    float d = a-3;
     
-    //unsigned
-    uint32_t uintoverflow = numeric_limits<uint32_t>::min();
-    uint32_t uintoverflow_ = uintoverflow - 1;//overflow : 최댓값 나옴
-    cout<<uintoverflow<<endl;
-    cout<<uintoverflow_<<endl;
-    
-    cout<<endl;
-    
-    //signed
-    int32_t intoverflow = numeric_limits<int32_t>::min();
-    int32_t intoverflow_ = intoverflow - 1;//최댓값 나옴
-    cout<<intoverflow<<endl;
-    cout<<intoverflow_<<endl;
+    cout<<"a "<<a<<endl;
+    cout<<"b "<<b<<endl;
+    cout<<"c "<<c<<endl;
+    cout<<"d "<<d<<endl;
+    //float 타입으로는 실수가 잘 표현됨
     
     return 0; //종료코드 0이면 정상
 }
+
