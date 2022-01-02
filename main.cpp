@@ -12,14 +12,13 @@ using namespace std;
 
 int main() {
     //부동소수점
-    float a = 1.0;//1.0은 원래 double인데 형변환됨
-    double b = 1.0;
-    long double c = 1.0;//1.0은 원래 double인데 형변환됨
+    unsigned int num0;
+    float num1 = -118.625f;
     
-    cout<<"float "<<sizeof(1.0f)<<endl;//4
-    cout<<"double "<<sizeof(1.0)<<endl;//8
-    cout<<"long double "<<sizeof(1.0L)<<endl;//16 - 맥이라서
+    memcpy(&num0, &num1, sizeof(num1));//num1에 있는 값을 num0으로 카피
     
+    cout<<num0<<endl;//3270328320//num1의 메모리 레이아웃//이 값을 이진수로 변환하면
+    cout<<num1<<endl;//-118.625
     return 0; //종료코드 0이면 정상
 }
 
